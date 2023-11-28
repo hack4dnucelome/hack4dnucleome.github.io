@@ -44,7 +44,7 @@
                                 <a href="#Project 5">Project 5</a> &nbsp;&bull;&nbsp
                                 <a href="#Project 6">Project 6</a> &nbsp;&bull;&nbsp
                                 <a href="#Project 7">Project 7</a> &nbsp;&bull;&nbsp
-                                <a href="index.html" target="_blank" class="aaastandout">Back to main</a>
+                                <a href="index.html" target="_self" class="aaastandout">Back to main</a>
                                 </p>
                                 </div>
                                 
@@ -60,8 +60,8 @@
                 <h2 style="font-size:26px"><b>Project 1. Find sequence elements implicated in tissue-specific Hi-C contacts through machine learning.</b></h2>
                                                             
                 <p style="font-size:20px", align="justify">
-                    <b>Leading lab</b>: Noble Lab <br>
-                    <b>Stakeholders</b>: Anupama Jha (anupamaj [ a t ] uw.edu) and Gang Li (gangliuw [ a t ] uw.edu) <br>
+                    <b>Leading lab</b>: Noble Lab at University of Washington <br>
+                    <b>Stakeholders</b>: Anupama Jha (<a href = "mailto: anupamaj@uw.edu">anupamaj@uw.edu</a>) and Gang Li (<a href = "mailto: gangliuw@uw.edu">gangliuw@uw.edu</a>) <br>
                     <b>Desired deliverable</b>:  A benchmark of current Hi-C machine learning models for finding known and novel sequence elements relevant for tissue-specific Hi-C contacts. <br>
                     <b>Expected coding experience level</b>: Intermediate-Advanced. <br>
                     <b>Motivation</b>: Two major classes of machine learning models exist for predicting Hi-C contacts.
@@ -86,13 +86,110 @@ regulation, are lacking. <br>
                                                             
                 <p style="font-size:20px", align="justify">
                     <b>Leading lab</b>: Li lab at University of North Carolina, Chapel Hill (UNC-CH) and Hu lab at Cleveland Clinic <br>
-                    <b>Stakeholders</b>: Hongyu Yu (hongyuyu@email.unc.edu) and Shreya Mishra (mishras10@ccf.org) <br>
+                    <b>Stakeholders</b>: Hongyu Yu (<a href = "mailto: hongyuyu@email.unc.edu">hongyuyu@email.unc.edu</a>) and Shreya Mishra (<a href = "mailto: mishras10@ccf.org">mishras10@ccf.org</a>) <br>
                     <b>Desired deliverable</b>:  (1) Develop a computational pipeline to estimate the frequency and duration of chromatin looping status from live cell imaging data. (2) Characterize the cell-to-cell variability of the kinetics of chromatin looping events. (3) Compare chromatin looping dynamics among different genomic loci. <br>
                     <b>Expected coding experience level</b>: Basic familarity with Python and R. <br>
                     <b>Motivation</b>: The recently developed live cell imaging technology (PMID: 31124784, 30038397, 33310227) provides a powerful tool to study the kinetics of chromatin spatial organization in live cells, facilitating a deep understanding of chromatin folding dynamics and gene regulation. In contrast to rapid development of experimental technologies, tailored computational methods for analyzing live cell imaging data are still lacking. In the project, the goal is to develop a stand-alone, user-friendly computational pipeline to infer the underlying chromatin looping status from live cell imaging data. The software to be developed can be applied to characterize the temporal dynamics of both CTCF-CTCF loops and enhancer-promoter interactions, and has the potential to shed novel insights on transcriptional bursting and gene regulation.<br>
                 </p>
                 
         </div></div></a>
+
+    <a name="Project 3" id="Project 3"><div class="jumbotron" name="Project 3" id="Project 3"><a></a>
+            
+            <div class="page-header">
+            <h2 style="font-size:26px"><b>Project 3. In silico variant prioritization using sequence-based predictive models. </b></h2>
+                                                        
+            <p style="font-size:20px", align="justify">
+                <b>Leading lab</b>: Pollard Lab at UCSF <br>
+                <b>Stakeholders</b>: Katie Gjoni (<a href = "mailto: katie.gjoni@gladstone.ucsf.edu">katie.gjoni@gladstone.ucsf.edu</a>), Shu Zhang (<a href = "mailto: shu.zhang@gladstone.ucsf.edu">shu.zhang@gladstone.ucsf.edu</a>) and Katie Pollard (<a href = "mailto: katherine.pollard@gladstone.ucsf.edu">katherine.pollard@gladstone.ucsf.edu</a>) <br>
+                <b>Desired deliverable</b>: Implementing various machine learning models to score variants for disruption to predicted results. <br>
+                <b>Expected coding experience level</b>: Strong background in python, and experience working in bash. <br>
+                <b>Motivation</b>: Predictive bioinformatics algorithms that take DNA sequences as input are frequently used to
+test the effects of genetic variants in high throughput in silico perturbation experiments. There
+previously lacked a standard procedure in formatting individual variants into a set of
+ready-to-use inputs. However, our lab recently developed SuPreMo, a computational tool to
+prepare individual genetic variants into model-ready DNA sequences. In addition, SuPreMo is
+directly integrated with Akita, a model that predicts genome folding. This project intends to
+extend this work to generate a set of SuPreMo-based tools that comprehensively scores
+variants for effects on various chromatin profiles and gene expression. This entails three coding
+days of 1) implementing machine learning models, 2) processing their outputs to allow for fair
+comparison of outputs, and 3) evaluating statistical methods for comparing outputs from
+reference and mutated sequences. These tools would be important for prioritizing putative
+pathogenic variants for experimental studies, decoding the grammar of noncoding DNA
+sequences, discovering new sequence motifs, designing tissue-specific enhancers, and
+uncovering novel roles of sequence elements.<br>
+            </p>
+            
+    </div></div></a>
+
+    <a name="Project 4" id="Project 4"><div class="jumbotron" name="Project 4" id="Project 4"><a></a>
+            
+            <div class="page-header">
+            <h2 style="font-size:26px"><b>Project 4. Integrative analysis of single-cell Hi-C datasets. </b></h2>
+                                                        
+            <p style="font-size:20px", align="justify">
+                <b>Leading lab</b>: Jian Ma Lab at CMU <br>
+                <b>Stakeholders</b>: Akanksha Sachan (<a href = "mailto: akanksha.11.05.07@gmail.com">akanksha.11.05.07@gmail.com</a>) and Wendy Yang (<a href = "mailto: muyuy@andrew.cmu.edu">muyuy@andrew.cmu.edu</a>) <br>
+                <b>Desired deliverable</b>: In this project, we aim to build a workflow for scHi-C data analysis using the
+existing software (Higashi and Fast-Higashi) to achieve the following two goals: (1)
+generate cell embeddings that reflect the cell types in the dataset; (2) identify the
+single-cell level 3D genome features based on the imputed scHi-C contact maps and
+study the cell-to-cell variability of those features. We will primarily focus on the first goal. <br>
+                <b>Expected coding experience level</b>: Python, bash/terminal experience. <br>
+                <b>Motivation</b>: Cellular heterogeneity can be observed by embedding their genome architectural
+features. This also enables connecting genomic architecture to other epigenetic data
+modalities to assess its functional roles comprehensively. <br>
+            </p>
+            
+    </div></div></a>
+
+    <a name="Project 5" id="Project 5"><div class="jumbotron" name="Project 5" id="Project 5"><a></a>
+            
+            <div class="page-header">
+            <h2 style="font-size:26px"><b>Project 5. Integrative analysis of single-cell Hi-C datasets. </b></h2>
+                                                        
+            <p style="font-size:20px", align="justify">
+                <b>Leading lab</b>: Christina Leslie Lab at MSKCC <br>
+                <b>Stakeholders</b>: Alireza Karbalayghareh (<a href = "mailto: karbalayghareh@gmail.com">karbalayghareh@gmail.com</a>) and Rui Yang (<a href = "mailto: ruy4001@med.cornell.edu">ruy4001@med.cornell.edu</a>) <br>
+                <b>Desired deliverable</b>: In this project, we aim to explore the impact of 3D genome structure on gene expression. GraphReg, a deep learning model, leverages 3D interactions along with 1D epigenomic data or genomic DNA sequences to predict gene expression. During the hackathon, participants will have the opportunity to engage in: 
+a) Biological application of the model: Participants will apply the GraphReg model to germinal center B cell data. Using feature attributions, they will investigate potential enhancer-promoter interactions or distal regulatory elements influencing gene expression. 
+b) Technical benchmarking of the data: Epiphany and ChromaFold are two deep learning models to predict Hi-C contact maps using 1D epigenomic tracks or scATAC-seq matrices. Participants will benchmark the effectiveness of GraphReg predictions by comparing experimental Hi-C data against model-predicted data, and analyze the results.
+<br>
+                <b>Expected coding experience level</b>: Basic knowledge about Python, bash/terminal experience. <br>
+                <b>Motivation</b>: In this project, we hope to explore two directions: a) a biological application of GraphReg on novel dataset; b) Benchmark the application of real experimental data vs. predicted Hi-C data from previously published models.  <br>
+            </p>
+            
+    </div></div></a>
+
+        <a name="Project 6" id="Project 6"><div class="jumbotron" name="Project 6" id="Project 6"><a></a>
+
+        <div class="page-header">
+        <h2 style="font-size:26px"><b>Project 6. Deep polymer model benchmark. </b></h2>
+                                                    
+        <p style="font-size:20px", align="justify">
+            <b>Leading lab</b>: Plewczynski Laboratory from University of Warsaw in Center of New Technologies CeNT, Warsaw, Poland <br>
+            <b>Stakeholders</b>: NA <br>
+            <b>Desired deliverable</b>: Collections of 3D models for selected cell lines and experimental assays. <br>
+            <b>Expected coding experience level</b>: Basic familarity with Python and R. <br>
+            <b>Motivation</b>: The aim of the project is the identification of software to be suggested as the state-of-the-art practice in the modeling of spatial chromatin organization. One of the factors that impacts the chromatin structure are epigenomic modifications, such as methylation of histones (proteins around which the DNA strand is wrapped to form nucleosomes). In recent years, various approaches have been taken to predict the structure of chromatin, the majority of which leverages data about epigenomic modifications, which serves as input for the models. Therefore, the project we propose will consist of two parts - the evaluation of existing deep learning models for the prediction of epigenomic modifications based on DNA sequence and models for the prediction of chromatin structure based on DNA sequence and epigenomic modifications. Different approaches have their advantages, as well as drawbacks. In order for the community of researchers to benefit from the software, it is important to identify opportunities to improve it. During the hackathon we will validate the models based on experimental data and their performance will be determined based on metrics such as performance, inference time, interpretability, and consumed computational resources. The goal of our project is to provide the direction for reaching a high level of confidence in the modeling of chromatin structure.<br>
+        </p>
+
+        </div></div></a>
+
+        <a name="Project 7" id="Project 7"><div class="jumbotron" name="Project 7" id="Project 7"><a></a>
+        
+        <div class="page-header">
+        <h2 style="font-size:26px"><b>Project 7. Unveiling the role of chromatin accessibility on RNA splicing during neural development. </b></h2>
+                                                    
+        <p style="font-size:20px", align="justify">
+            <b>Leading lab</b>: YIN SHEN Lab from UCSF <br>
+            <b>Stakeholders</b>: Jing Wang (<a href = "mailto: Jing.Wang4@ucsf.edu">Jing.Wang4@ucsf.edu</a>), Ian Jones, Yifan Sun (<a href = "mailto: Yin.Shen@ucsf.edu">Yin.Shen@ucsf.edu</a>) <br>
+            <b>Desired deliverable</b>:  The deliverable of this study will be a comprehensive analysis outlining correlations between chromatin accessibility profiles obtained from ATAC-seq and PLAC-seq data and the corresponding RNA splicing patterns extracted from RNA-seq data. This will potentially include visualizations, statistical models, and identified key regulatory elements impacting splicing events. <br>
+            <b>Expected coding experience level</b>: Basic familarity with Python and R. <br>
+            <b>Motivation</b>: This study aims to elucidate the relationship between chromatin accessibility and RNA splicing using multi-omics data obtained from human brain samples. Leveraging RNA-seq, ATAC-seq, and PLAC-seq datasets, our primary objective is to analyze the influence of chromatin accessibility patterns on the splicing landscape across multiple subtypes the human brain.<br>
+        </p>
+        
+    </div></div></a>
 
     </body>
 
