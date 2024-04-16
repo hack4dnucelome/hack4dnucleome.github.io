@@ -96,7 +96,26 @@ In this project, we systematically evaluated one model from both model classes o
                     <b>Desired deliverable</b>:  (1) Develop a computational pipeline to estimate the frequency and duration of chromatin looping status from live cell imaging data. (2) Characterize the cell-to-cell variability of the kinetics of chromatin looping events. (3) Compare chromatin looping dynamics among different genomic loci. <br>
                     <b>Expected coding experience level</b>: Basic familarity with Python and R. <br>
                     <b>Motivation</b>: The recently developed live cell imaging technology (PMID: 31124784, 30038397, 33310227) provides a powerful tool to study the kinetics of chromatin spatial organization in live cells, facilitating a deep understanding of chromatin folding dynamics and gene regulation. In contrast to rapid development of experimental technologies, tailored computational methods for analyzing live cell imaging data are still lacking. In the project, the goal is to develop a stand-alone, user-friendly computational pipeline to infer the underlying chromatin looping status from live cell imaging data. The software to be developed can be applied to characterize the temporal dynamics of both CTCF-CTCF loops and enhancer-promoter interactions, and has the potential to shed novel insights on transcriptional bursting and gene regulation.<br>
-                    <b>Post-Hackathon Summary</b>: <br>
+                    <b>Post-Hackathon Summary</b>: During the hackathon, we were able to achieve the following:
+1) Applied Mach et al’s HMM to Gabriele et al’s data and showed that the loop fraction predicted by HMM differs from the one predicted by BILD.
+2) Tried to replicate the analysis in Gabriele et al using the tracklib library developed by the authors. Successfully replicated the MSD fitting part but not the loop analysis part.
+3) Systematically improved the current HMM in the following directions:
+(a) Tested various imputation methods to fill in missing data points, including:
+Fill with the preceding value,
+Apply Savitzky–Golay filter to smooth the trajectory,
+Impute by (weighted) moving average models,
+Interpolate by splines, and
+Apply Kalman filters.
+(b) Changed the emitting distribution from normal to multivariate normal.
+(c) Fitted the parameters of the distributions before fitting the HMM.
+For the un-looped state, estimate parameters using control strains.
+For the looped state, set the variance as 15% of the un-looped state.
+(d) Rederived the expectation-maximization algorithm used in HMM to handle trajectories with missing values. Modified hmmlearn library.
+4) Generated simulated data to evaluate our new model:
+(a) Found the optimal transition matrix by comparing the MSD from real data and simulated data.
+(b) Simulated missing values in trajectories by estimating true missing patterns.
+In the end, we implemented all the above improvements with Python. The improved model has higher accuracy and precision on the simulated data. It also returns a more realistic loop fraction and loop lifetimes on real data.
+<br>
                     <a href="#Heading"><b>Back to top</b></a><br>
                     </p>
                 
@@ -196,7 +215,15 @@ b) Technical benchmarking of the data: Epiphany and ChromaFold are two deep lear
             The rationale behind the project is that different approaches have their advantages, as well as drawbacks. 
             In order for the community of researchers to benefit from the software, it is important to identify opportunities to improve it. 
             The goal of our project is to provide the direction for reaching a high level of confidence in the modeling of chromatin structure.<br>
-            <b>Post-Hackathon Summary</b>: <br>
+            <b>Post-Hackathon Summary</b>: The aim of the project was to create criteria for chromatin model comparison and subsequently to benchmark software for chromatin modeling based on those criteria. 
+Description of the proposed deliverables, as well as the results 
+1) Collection of 3D chromatin models for selected cell lines and experimental assays Result: We obtained two models (based on Hi-C and ChIA-PET data) per software (5 software packages in total) for the Tier 1 cell line GM12878. 
+2) Protocol for critical assessment of the models. Result: we developed a prototype methodology for model visualization, model vs. model comparison, as well as model vs. experiment comparison. 
+3) Catalog of problems solvable by chromatin modeling. For the purposes of Hackathon we implemented different modeling methodologies, which aim to answer different problems. LoopSage is capable of reconstructing the thermodynamic ensemble of possible structures of a specific region based on the loop extrusion first principles and realistically reconstructing experimental heat maps by averaging over them. MultiEM, is a multiscale model which can model different scales of chromatin by applying a multi-scale nature
+potential. On the other hand, DIMES and PHi-C are two models that were implemented for a more direct (top-down) reconstruction of Hi-C matrices dependent on Hi-C contacts. 
+4) Classification of modeling methods. Result: we classified the output models based on the input data (Hi-C vs. ChIA-PET) as well as modeling scale. Furthermore, according to our bibliographical research, modeling methods can be distinguished into deterministic (i.e. MultiEM, DIMES, PHi-C) versus stochastic (i.e. LoopSage). We acknowledged the power of stochastic methods to create ensembles of structures, which is in contrast to the computational power that they require. 
+Our prototype pipeline is modular and scalable, therefore we plan to collaborate to extend it to include other software packages, as well as to perform multi-scale model comparison. We would also like to explore the most uncorrelated models and the software which generated them to examine the characteristics that cause the differences.
+<br>
             <a href="#Heading"><b>Back to top</b></a><br>
             </p>
 
